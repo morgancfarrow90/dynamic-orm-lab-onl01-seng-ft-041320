@@ -56,6 +56,7 @@ end
 def self.find_by(x)
   sql = "SELECT * FROM #{self.table_name}"
   DB[:conn].execute(sql, x).map do |row|
-    if 
+    if sql.include?(x)
+      
 
 end
